@@ -1,0 +1,7 @@
+settings.json
+test_out/
+
+# vim
+*~
+*.swo
+*.swp
