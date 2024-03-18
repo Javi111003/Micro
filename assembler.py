@@ -477,7 +477,7 @@ if __name__ == "__main__":
     try:
         infile = open(input_file)
     except IOError as e:
-        print >> sys.stderr, "Unable to open input file %s" % input_file
+        print(f"Unable to open input file {input_file}", file=sys.stderr)
         sys.exit(1)
     try:
         fill_symbol_table(infile)
@@ -485,11 +485,11 @@ if __name__ == "__main__":
         instructions = assemble_instructions(infile)
         infile.close()
     except AssemblerError as e:
-        print >> sys.stderr, str(e)
+        print(str(e), file=sys.stderr)
         sys.exit(1)
     try:
         print_instructions(instructions, output_folder)
     except IOError as e:
-        print >> sys.stderr, "Unable to write to output file %s" % output_file
+        print(f"Unable to open input file {input_file}", file=sys.stderr)
         sys.exit(1)
     sys.exit(0)
