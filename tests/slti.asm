@@ -1,2 +1,2 @@
-slti r0 , r1 , 10
+slti r0 , r1 , 0
 halt
