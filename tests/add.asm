@@ -1,4 +1,3 @@
-addi r0, r0, 0
 addi r3 r0 30
 addi r1 r0 30
 add r4 r3 r1

@@ -1,4 +1,3 @@
-addi r0, r0, 0
 addi r1 r0 4
 addi r3 r0 20
 mult r3 r1
