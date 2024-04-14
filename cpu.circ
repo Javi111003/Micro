@@ -195,11 +195,12 @@
       <a name="size" val="20"/>
     </tool>
     <tool lib="1" name="AND Gate">
+      <a name="facing" val="north"/>
       <a name="size" val="30"/>
       <a name="inputs" val="2"/>
-      <a name="negate1" val="true"/>
     </tool>
     <tool lib="1" name="OR Gate">
+      <a name="facing" val="north"/>
       <a name="size" val="30"/>
       <a name="inputs" val="2"/>
     </tool>
@@ -229,6 +230,7 @@
       <circ-anchor facing="east" height="6" width="6" x="107" y="87"/>
     </appear>
     <wire from="(690,890)" to="(690,900)"/>
+    <wire from="(700,60)" to="(700,70)"/>
     <wire from="(550,1240)" to="(730,1240)"/>
     <wire from="(720,1280)" to="(770,1280)"/>
     <wire from="(1240,650)" to="(1280,650)"/>
@@ -311,6 +313,7 @@
     <wire from="(490,540)" to="(500,540)"/>
     <wire from="(300,790)" to="(310,790)"/>
     <wire from="(1140,1250)" to="(1170,1250)"/>
+    <wire from="(630,70)" to="(700,70)"/>
     <wire from="(120,1050)" to="(130,1050)"/>
     <wire from="(400,70)" to="(480,70)"/>
     <wire from="(400,110)" to="(480,110)"/>
@@ -489,6 +492,10 @@
       <a name="facing" val="east"/>
       <a name="label" val="push"/>
     </comp>
+    <comp lib="0" loc="(620,100)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="push"/>
+    </comp>
     <comp lib="4" loc="(1090,1300)" name="D Flip-Flop"/>
     <comp lib="0" loc="(140,290)" name="Tunnel">
       <a name="facing" val="north"/>
@@ -533,10 +540,6 @@
       <a name="facing" val="east"/>
       <a name="width" val="32"/>
       <a name="label" val="constant_2"/>
-    </comp>
-    <comp lib="0" loc="(700,60)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="stk"/>
     </comp>
     <comp lib="0" loc="(880,50)" name="Tunnel">
       <a name="facing" val="south"/>
@@ -841,6 +844,10 @@
       <a name="label" val="ram_read_addr"/>
       <a name="labelloc" val="east"/>
     </comp>
+    <comp lib="0" loc="(640,100)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="POP"/>
+    </comp>
     <comp lib="4" loc="(760,780)" name="Register">
       <a name="width" val="32"/>
       <a name="label" val="Lo"/>
@@ -918,6 +925,11 @@
     <comp lib="0" loc="(1020,1310)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="pop_2"/>
+    </comp>
+    <comp lib="1" loc="(630,70)" name="OR Gate">
+      <a name="facing" val="north"/>
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
     </comp>
     <comp lib="2" loc="(690,1270)" name="Demultiplexer">
       <a name="enable" val="false"/>
