@@ -48,7 +48,8 @@
       <a name="size" val="20"/>
     </tool>
     <tool name="AND Gate">
-      <a name="inputs" val="12"/>
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
     </tool>
     <tool name="OR Gate">
       <a name="size" val="70"/>
@@ -1972,7 +1973,6 @@
     <wire from="(400,370)" to="(420,370)"/>
     <wire from="(400,210)" to="(420,210)"/>
     <wire from="(400,80)" to="(420,80)"/>
-    <wire from="(400,340)" to="(420,340)"/>
     <wire from="(500,650)" to="(650,650)"/>
     <wire from="(160,610)" to="(180,610)"/>
     <wire from="(160,920)" to="(180,920)"/>
@@ -1989,6 +1989,7 @@
     <wire from="(160,320)" to="(180,320)"/>
     <wire from="(630,820)" to="(720,820)"/>
     <wire from="(460,650)" to="(470,650)"/>
+    <wire from="(400,340)" to="(540,340)"/>
     <wire from="(450,520)" to="(590,520)"/>
     <wire from="(510,510)" to="(590,510)"/>
     <wire from="(630,800)" to="(710,800)"/>
@@ -2024,6 +2025,7 @@
       <a name="width" val="32"/>
       <a name="label" val="addr"/>
     </comp>
+    <comp lib="7" loc="(710,640)" name="cpu"/>
     <comp lib="0" loc="(630,830)" name="Tunnel">
       <a name="width" val="4"/>
       <a name="label" val="Write Time"/>
@@ -2040,7 +2042,6 @@
       <a name="tristate" val="false"/>
       <a name="label" val="Chip Select"/>
     </comp>
-    <comp lib="7" loc="(710,640)" name="cpu"/>
     <comp lib="6" loc="(177,113)" name="Text">
       <a name="text" val="DATA FROM RAM"/>
       <a name="font" val="SansSerif plain 20"/>
@@ -2177,6 +2178,10 @@
     <comp lib="0" loc="(720,820)" name="Tunnel">
       <a name="label" val="CLK"/>
     </comp>
+    <comp lib="1" loc="(570,350)" name="AND Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
     <comp lib="0" loc="(850,580)" name="Tunnel">
       <a name="label" val="STOP"/>
     </comp>
@@ -2219,9 +2224,6 @@
     <comp lib="0" loc="(180,1040)" name="Tunnel">
       <a name="label" val="CS"/>
     </comp>
-    <comp lib="7" loc="(600,840)" name="load_ram">
-      <a name="facing" val="west"/>
-    </comp>
     <comp lib="0" loc="(160,1010)" name="Pin">
       <a name="output" val="true"/>
       <a name="tristate" val="false"/>
@@ -2251,6 +2253,10 @@
     <comp lib="0" loc="(1240,100)" name="Tunnel">
       <a name="label" val="RW"/>
     </comp>
+    <comp lib="0" loc="(520,360)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="STOP"/>
+    </comp>
     <comp lib="0" loc="(710,600)" name="Tunnel">
       <a name="facing" val="south"/>
       <a name="label" val="CLK"/>
@@ -2258,6 +2264,9 @@
     <comp lib="0" loc="(650,630)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="read_end"/>
+    </comp>
+    <comp lib="0" loc="(570,350)" name="Tunnel">
+      <a name="label" val="CLK"/>
     </comp>
     <comp lib="0" loc="(420,110)" name="Tunnel">
       <a name="label" val="KBD AVAIL"/>
@@ -2310,6 +2319,12 @@
     <comp lib="0" loc="(1240,200)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="CLR"/>
+    </comp>
+    <comp lib="1" loc="(540,360)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="7" loc="(600,840)" name="load_ram">
+      <a name="facing" val="west"/>
     </comp>
     <comp lib="0" loc="(410,910)" name="Tunnel">
       <a name="facing" val="north"/>
@@ -2392,9 +2407,6 @@
       <a name="width" val="16"/>
       <a name="label" val="RAM A"/>
     </comp>
-    <comp lib="0" loc="(420,340)" name="Tunnel">
-      <a name="label" val="CLK"/>
-    </comp>
     <comp lib="0" loc="(420,150)" name="Tunnel">
       <a name="width" val="7"/>
       <a name="label" val="KBD DATA"/>
@@ -2422,7 +2434,6 @@
       <a name="text" val="DATA WRITE MASK"/>
       <a name="font" val="SansSerif plain 20"/>
     </comp>
-    <comp lib="7" loc="(630,520)" name="fake_ram"/>
     <comp lib="0" loc="(600,840)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="load_end"/>
@@ -2450,6 +2461,7 @@
       <a name="tristate" val="false"/>
       <a name="label" val="Reset"/>
     </comp>
+    <comp lib="7" loc="(630,520)" name="fake_ram"/>
     <comp lib="2" loc="(430,890)" name="Multiplexer">
       <a name="width" val="16"/>
       <a name="enable" val="false"/>
